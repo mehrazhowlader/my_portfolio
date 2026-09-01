@@ -1,0 +1,187 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 78px;
+}
+
+/* --- Left visual --------------------------------------------------------- */
+
+.about__visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about__photo-card {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
+}
+
+.about__photo-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green-line);
+  box-shadow: 0 20px 40px rgba(34, 181, 115, 0.18);
+}
+
+.about__photo-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.about__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.6s var(--ease);
+}
+
+.about__photo-card:hover .about__photo {
+  transform: scale(1.04);
+}
+
+.about__photo-badge {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: rgba(15, 26, 36, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.about__photo-badge .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.about__frame {
+  position: relative;
+  z-index: 1;
+  padding: 34px 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.about__label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.about__quote {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #2a2456;
+}
+
+.about__meta {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 14px;
+}
+
+.about__meta li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14.5px;
+}
+
+.about__meta svg {
+  color: var(--green);
+  flex: none;
+}
+
+.about__socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.about__socials a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: #57697a;
+  transition: all 0.25s var(--ease);
+}
+
+.about__socials a:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* a green frame offset behind the card, showing an L along its right + bottom */
+.about__accent {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  right: -18px;
+  bottom: -18px;
+  border: 2px solid var(--green-line);
+  border-radius: var(--radius);
+}
+
+/* --- Right copy ---------------------------------------------------------- */
+
+.about__para {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.about__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.about__cta {
+  margin-top: 34px;
+}
+
+@media (max-width: 980px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+  .about__accent {
+    display: none;
+  }
+}

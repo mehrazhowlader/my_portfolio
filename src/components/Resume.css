@@ -1,0 +1,54 @@
+.resume {
+  padding: 0;
+  /* half on the dark section above, half on the light one below */
+  margin-top: -66px;
+  position: relative;
+  z-index: 2;
+}
+
+.resume__band {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 36px 42px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-md);
+}
+
+.resume__icon {
+  width: 62px;
+  height: 62px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.resume__copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.resume__title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: #2a2456;
+}
+
+.resume__text {
+  margin-top: 6px;
+  font-size: 0.94rem;
+}
+
+@media (max-width: 780px) {
+  .resume__band {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px 26px;
+  }
+}

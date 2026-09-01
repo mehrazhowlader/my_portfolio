@@ -1,0 +1,138 @@
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 26px;
+}
+
+.project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 38px 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  overflow: hidden;
+  transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.project::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  background: var(--green);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease);
+}
+
+.project:hover {
+  border-color: transparent;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-6px);
+}
+
+.project:hover::after {
+  transform: scaleX(1);
+}
+
+.project__head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.project__index {
+  width: 54px;
+  height: 54px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: background 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.project:hover .project__index {
+  background: var(--green);
+  color: #fff;
+}
+
+.project__kicker {
+  display: block;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.project__name {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  color: #2a2456;
+}
+
+.project__body {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  flex: 1;
+}
+
+.project__summary {
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+.project__points {
+  display: grid;
+  gap: 11px;
+}
+
+.project__points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.project__points svg {
+  flex: none;
+  margin-top: 4px;
+  color: var(--green);
+}
+
+.project__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.project__award {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+  border-radius: 4px;
+  background: var(--green-soft);
+  color: var(--green-dark);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.project__award svg {
+  flex: none;
+}
