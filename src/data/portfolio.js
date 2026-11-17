@@ -38,17 +38,20 @@ export const about = {
   eyebrow: 'About Me',
   title: 'A student developer learning by building',
   paragraphs: [
-    'I am an undergraduate Computer Science & Engineering student at United International University, expected to graduate in 2027. Most of what I know comes from building things end to end — designing the requirements, drawing the interface, writing the backend and wiring the database underneath.',
-    'My interests sit across full-stack development, backend engineering, software engineering practice and web technologies, with a growing focus on AI-enabled software. I enjoy the part of a project where a messy real-world process has to be turned into a clear system that people can actually use.',
-    'Alongside coursework I serve as an Undergraduate Assistant for the Database Management Systems Laboratory, which keeps me close to fundamentals and to explaining them clearly.',
-  ],
-  highlights: [
-    'Full-Stack Development',
-    'Backend Development',
-    'Software Engineering',
-    'Web Technologies',
-    'AI-enabled Software',
-  ],
+  'I am an undergraduate Computer Science & Engineering student at United International University, expected to graduate in 2027, passionate about building meaningful software solutions and exploring how technology can solve real-world problems. I enjoy working across the software development lifecycle — from analyzing requirements and designing intuitive interfaces to developing backend systems, integrating databases, and turning ideas into functional products.',
+  'My technical interests include Software Engineering, Full-Stack Development, Backend Engineering, Artificial Intelligence, Machine Learning, and Data-Driven Applications. I have worked on projects such as ArchAxis, an AI-enhanced construction project management platform, which earned the Champion position in the System Analysis & Design category at the UIU CSE Project Showcase. I have also explored IoT-based automation through Aquafonic, which received 3rd Runner-Up in the Electronics Project category. These experiences have strengthened my problem-solving, system design, teamwork, and project development skills.',
+  'Beyond development, I serve as an Undergraduate Assistant at United International University, supporting laboratory activities and helping students understand technical concepts. With a strong interest in continuous learning, I am currently expanding my knowledge in AI and Machine Learning while developing my research skills. I am open to software engineering internships, research opportunities, collaborative projects, and opportunities where I can contribute, learn, and grow as an engineer.'
+],
+ highlights: [
+  'Full-Stack Development',
+  'Backend Engineering',
+  'Software Engineering',
+  'Web Application Development',
+  'Artificial Intelligence',
+  'Machine Learning',
+  'Research & Innovation',
+  'Problem Solving',
+],
 }
 
 // Icon keys map to the inline SVGs in `src/components/Icons.jsx`.
@@ -56,9 +59,9 @@ export const skillGroups = [
   {
     icon: 'code',
     title: 'Programming',
-    description:
-      'Core languages I write day to day, from systems coursework through to scripting and application logic.',
-    items: ['C', 'C++', 'Java', 'Python', 'JavaScript', 'PHP'],
+   description:
+  'Programming languages I use across academic coursework, problem-solving, and software development, from low-level programming to scripting and application logic.',
+ items: ['C', 'C++', 'Java', 'Python', 'JavaScript', 'PHP'],
   },
   {
     icon: 'layout',
@@ -136,7 +139,7 @@ export const projects = [
       'Role-based dashboards per operational role',
       'Ship and location tracking across the port',
     ],
-    tech: ['PHP', 'MySQL'],
+   tech: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'Leaflet.js'],
     award: null,
   },
 ]
@@ -151,6 +154,26 @@ export const experience = [
       'Support course-related activities alongside the laboratory instructor.',
     ],
   },
+ {
+    role: 'Undergraduate Assistant — Microprocessors Laboratory',
+    org: 'United International University',
+    meta: 'CSE 4326 — Microprocessors and Microcontrollers Laboratory',
+    points: [
+       'Assist students during laboratory sessions with experiment procedures, circuit connections, and practical implementations.',
+  'Support students in understanding microprocessor and microcontroller concepts, troubleshooting basic hardware issues, and executing lab tasks.',
+  'Coordinate with the course instructor to support laboratory activities and ensure smooth session operations.',
+    ],
+  },
+  {
+  role: 'Organizing Secretary',
+  org: 'SGCD Science Club',
+  meta: 'Sabujbagh Govt. College| [2020 – 2022]',
+  points: [
+    'Coordinated the planning and organization of science-related events, activities, and club initiatives.',
+    'Collaborated with club members to manage event arrangements, communication, and operational activities.',
+    'Encouraged student participation in scientific exploration, teamwork, and extracurricular learning.',
+  ],
+},
 ]
 
 export const education = [
@@ -163,6 +186,24 @@ export const education = [
       'Project-based learning through the CSE Project Showcase.',
     ],
   },
+  {
+  degree: 'Higher Secondary Certificate (HSC)',
+  org: 'Sabujbagh Govt. College, Dhaka ',
+  meta: 'Science | GPA:5.00',
+  points: [
+    'Completed higher secondary education with a focus on Physics, Chemistry, Mathematics, and ICT.',
+    'Developed foundational knowledge in analytical thinking, mathematics, and scientific problem-solving.',
+  ],
+},
+{
+  degree: 'Secondary School Certificate (SSC)',
+  org: 'Madartek Abdul Aziz High School & College',
+  meta: 'Science | GPA: 5.00',
+  points: [
+    'Completed secondary education with a foundation in Mathematics, Physics, Chemistry, and ICT.',
+    'Developed analytical thinking, problem-solving abilities, and an interest in science and technology.',
+  ],
+},
 ]
 
 export const achievements = [
@@ -186,7 +227,20 @@ export const achievements = [
 
 // Nothing to list yet — the section renders a placeholder instead of
 // inventing credentials. Add objects as `{ name, issuer, year, url }`.
-export const certifications = []
+export const certifications = [
+  {
+    name: 'AI Fluency: AI Capabilities & Limitations',
+    issuer: 'Anthropic Education',
+    date: 'August 12, 2026',
+    credentialUrl: 'https://verify.skilljar.com/c/2ojbafkup9vq',
+  },
+  {
+    name: 'AI Fluency: Framework & Foundations',
+    issuer: 'Anthropic Education',
+    date: 'August 10, 2026',
+    credentialUrl: 'https://verify.skilljar.com/c/ucfhda2p6rzu',
+  },
+];
 
 export const contact = {
   eyebrow: 'Contact',
